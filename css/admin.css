@@ -1,0 +1,59 @@
+.dash-list {
+  position: relative;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.dash-list li {
+  position: relative;
+  float: left;
+  margin: 8px;
+}
+.dash-list li a {
+  display: block;
+  padding: 8px;
+  text-align: center;
+}
+.dash-list li h1, .dash-list li h2, .dash-list li h3, .dash-list li h4 {
+  font-weight: lighter;
+  font-size: 1.2em;
+}
+
+#crop-base {
+  position: relative;
+  text-align: center !important;
+  min-height: 280px;
+  background-image: url(../img/upload-file.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+#crop-base img.prev-set {
+  width: 100%;
+  height: auto;
+}
+#crop-base #input-trigger {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: auto;
+  margin: 0;
+  float: none;
+}
+#crop-base.engaged #input-trigger {
+  display: none;
+}
+
+#floatn-plus {
+  position: fixed;
+  right: 12px;
+  bottom: 20px;
+  width: 60px;
+  height: 60px;
+  -webkit-border-radius: 100%;
+  -ms-border-radius: 100%;
+  -moz-border-radius: 100%;
+  border-radius: 100%;
+  z-index: 200;
+}
+
+/*# sourceMappingURL=admin.css.map */

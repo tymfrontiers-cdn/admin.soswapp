@@ -1,0 +1,13 @@
+{
+  "name" : "tymfrontiers-cdn/admin-soswapp",
+  "description" : "Admin Web app for 7 OS",
+  "homepage" : "https://github.com/tymfrontiers-cdn/admin-soswapp",
+  "support" : {
+    "email" : "dev@tymfrontiers.com",
+    "website" : "https://tymfrontiers.com",
+    "kollabo" : "@tymfrontiers",
+    "twitter" : "@tymfrontiers",
+    "facebook" : "@tymfrontiers",
+    "istagram" : "@tymfrontiers"
+  }
+}

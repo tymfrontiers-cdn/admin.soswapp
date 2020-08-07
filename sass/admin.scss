@@ -1,0 +1,58 @@
+@import "colors";
+@import "fn";
+
+.dash-list{
+  position: relative;
+  list-style: none;
+  margin: 0; padding: 0;
+  li{
+    position: relative;
+    float: left;
+    margin: 8px;
+    a{
+      display: block;
+      padding: 8px;
+      text-align: center;
+    }
+    h1, h2, h3, h4{
+      font-weight: lighter;
+      font-size: 1.2em;
+    }
+  }
+}
+#crop-base{
+  position: relative;
+  text-align: center !important;
+  min-height: 280px;
+  background-image: url(../img/upload-file.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  img{
+    // position: absolute;
+    // position: relative;
+    // display: block;
+    // max-width: 100% !important;
+    // height: auto;
+  }
+  img.prev-set{
+    width: 100%;
+    height: auto;
+  }
+  #input-trigger{
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: auto;
+    margin: 0;
+    float: none;
+  }
+  // &:hover #input-trigger{ display: block; }
+  &.engaged #input-trigger{ display: none; }
+}
+#floatn-plus{
+  position: fixed;
+  right: 12px; bottom: 20px;
+  width: 60px; height: 60px;
+  @include border-radius(100%);
+  z-index: 200;
+}

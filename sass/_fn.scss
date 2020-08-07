@@ -1,0 +1,73 @@
+@mixin animate-all{
+	-webkit-transition: all 0.2s ease-in;
+	-moz-transition: all 0.2s ease-in;
+  -ms-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+	transition: all 0.2s ease-in;
+}
+@mixin animate-bg{
+	-webkit-transition: background 0.2s ease-in;
+	-moz-transition: background 0.2s ease-in;
+    -ms-transition: background 0.2s ease-in;
+    -o-transition: background 0.2s ease-in;
+	transition: background 0.2s ease-in;
+}
+@mixin spin {
+	-webkit-animation: spin 2s infinite linear;
+	animation: spin 2s infinite linear;
+}
+@mixin animate-height{
+	-webkit-transition: height 0.2s ease-in;
+	-moz-transition: height 0.2s ease-in;
+    -ms-transition: height 0.2s ease-in;
+    -o-transition: height 0.2s ease-in;
+	transition: height 0.2s ease-in;
+}
+@mixin border($style,$width,$color){ border:$style $width $color}
+@mixin border-radius($radius){
+	-webkit-border-radius:$radius;
+	-ms-border-radius:$radius;
+	-moz-border-radius:$radius;
+	border-radius:$radius;
+}
+
+@mixin animate-width{
+	-webkit-transition: width 0.5s ease-in;
+	-moz-transition: width 0.5s ease-in;
+    -ms-transition: width 0.5s ease-in;
+    -o-transition: width 0.5s ease-in;
+	transition: width 0.5s ease-in;
+}
+@mixin drop-shadow($color){
+	-webkit-box-shadow: 0 1.5px 1.1px -1px $color;
+	-moz-box-shadow: 0 1.5px 1.1px -1px $color;
+	box-shadow: 0 1.5px 1.1px -1px $color;
+}
+@mixin no-shadow(){
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+}
+@mixin text-shadow($color){
+	-webkit-text-shadow:0.5px 0.5px 1.5px $color;
+	-moz-text-shadow:0.5px 0.5px 1.5px $color;
+	text-shadow:0.5px 0.5px 1.5px $color;
+}
+@mixin clear-input {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-background-clip: padding;
+	-moz-background-clip: padding;
+	background-clip:padding-box;
+	-webkit-border-radius:0;
+	-moz-border-radius:0;
+	-ms-border-radius:0;
+	-o-border-radius:0;
+	border-radius:0;
+	-webkit-appearance:none;
+	outline:0;
+	margin:0;
+	padding:0;
+	vertical-align: middle;
+}

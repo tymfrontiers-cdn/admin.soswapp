@@ -1,0 +1,20 @@
+{
+  "php-constant" : [],
+  "php-variable" : [
+    { "$session" : "\\TymFrontiers\\Session: https://github.com/tymfrontiers-cdn/php-session"}
+  ],
+  "php-include" : [],
+  "database-mysql" : {
+    "database" : [],
+    "table" : [],
+    "user" : ["MODERATOR","GUEST"]
+  },
+  "package" : [],
+  "script-js" : [
+    {
+      "jquery/jquery" : "",
+      "7os/them-soswapp" : ""
+    }
+  ],
+  "script-css" : []
+}

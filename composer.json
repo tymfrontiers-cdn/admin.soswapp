@@ -1,0 +1,27 @@
+{
+    "name": "tymfrontiers-cdn/admin.soswapp",
+    "description": "Admin web app for 7 OS",
+    "keywords": ["php", "javascript","7","seven","os","web","app"],
+    "homepage": "https://github.com/tymfrontiers-cdn/admin.soswapp",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ikechukwu Okalia",
+            "email": "dev@ikechukwuokalia.com"
+        },
+        {
+            "name": "Tym Frontiers Ltd.",
+            "email": "dev@tymfrontiers.com"
+        }
+    ],
+    "require": {
+      "tymfrontiers-cdn/php-helper-fnvars" : ">=0.1@stable"
+    },
+    "require-dev": {},
+    "autoload": {
+        "psr-4": {
+          "TymFrontiers\\Helper\\" : "src/"
+        }
+    }
+}
