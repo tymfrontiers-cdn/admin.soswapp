@@ -96,6 +96,6 @@ echo \json_encode([
   "status" => "0.0",
   "errors" => [],
   "message" => "Request was successful!",
-  "rdt" => Generic::setGet(WHOST . "/admin/sign-in", ["rdt"=>$rdt])
+  "rdt" => Generic::setGet(WHOST . "/app/admin/sign-in", ["rdt"=>$rdt])
 ]);
 exit;

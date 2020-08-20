@@ -33,7 +33,7 @@ require_once APP_ROOT . "/src/Helper.php";
     <link rel="stylesheet" href="<?php echo \html_style("base.min.css"); ?>">
   </head>
   <body>
-    <?php \setup_page("/admin/users", "project-admin", true, PRJ_HEADER_HEIGHT); ?>
+    <?php \setup_page("/app/admin/users", "project-admin", true, PRJ_HEADER_HEIGHT); ?>
     <?php include PRJ_INC_HEADER; ?>
 
     <section id="main-content">
@@ -115,7 +115,7 @@ require_once APP_ROOT . "/src/Helper.php";
         <br class="c-f">
       </div>
     </section>
-    <button type="button" onclick="sos.faderBox.url(location.origin + '/admin/user-invite', {}, {exitBtn: true});" class="sos-btn blue" id="floatn-plus"> <i class="fas fa-plus"></i></button>
+    <button type="button" onclick="sos.faderBox.url('/app/tymfrontiers-cdn/admin.soswapp/service/user-invite.php', {}, {exitBtn: true});" class="sos-btn blue" id="floatn-plus"> <i class="fas fa-plus"></i></button>
     <?php include PRJ_INC_FOOTER; ?>
     <!-- Required scripts -->
     <script src="/app/soswapp/jquery.soswapp/js/jquery.min.js">  </script>
@@ -153,7 +153,7 @@ require_once APP_ROOT . "/src/Helper.php";
           html += "<tr title=\"Added by: "+el.author_name+" - "+el.author+" | On: "+el.created+"\">";
             html += ( "<td>" +el.work_group+ " ("+el.status+")</td>" );
             html += "<td>";
-              html += ("<a class='blue' href='#' onclick=\"sos.faderBox.url(location.origin + '/admin/user-view',{id:'"+el.id+"'},{exitBtn:true})\"> <i class=\"fas fa-window-maximize\"></i> ");
+              html += ("<a class='blue' href='#' onclick=\"sos.faderBox.url('/app/tymfrontiers-cdn/admin.soswapp/service/user-view.php',{id:'"+el.id+"'},{exitBtn:true})\"> <i class=\"fas fa-window-maximize\"></i> ");
                 html += ( el.name + " @<i>"+el.id+"</i>");
               html += "</a>";
             html += "</td>";
@@ -197,7 +197,7 @@ require_once APP_ROOT . "/src/Helper.php";
               sel.val("");
             }
           } else if ($(this).val() == 'give-access') {
-            window.location = location.origin + "/admin/path-accesses?user=" + prop.id;
+            window.location = "/app/admin/path-accesses?user=" + prop.id;
           } else {
             //
           }

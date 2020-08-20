@@ -34,7 +34,7 @@ require_once APP_ROOT . "/src/Helper.php";
     <link rel="stylesheet" href="<?php echo \html_style("base.min.css"); ?>">
   </head>
   <body>
-    <?php \setup_page("/admin/work-domains", "project-admin", true, PRJ_HEADER_HEIGHT); ?>
+    <?php \setup_page("/app/admin/work-domains", "project-admin", true, PRJ_HEADER_HEIGHT); ?>
     <?php include PRJ_INC_HEADER; ?>
 
     <section id="main-content">
@@ -114,7 +114,7 @@ require_once APP_ROOT . "/src/Helper.php";
         <br class="c-f">
       </div>
     </section>
-    <button type="button" onclick="sos.faderBox.url(location.origin + '/admin/work-domain-make', {callback : 'refreshList'}, {exitBtn: true});" class="sos-btn blue" id="floatn-plus"> <i class="fas fa-plus"></i></button>
+    <button type="button" onclick="sos.faderBox.url( '/app/tymfrontiers-cdn/admin.soswapp/service/work-domain-make.php', {callback : 'refreshList'}, {exitBtn: true});" class="sos-btn blue" id="floatn-plus"> <i class="fas fa-plus"></i></button>
     <?php include PRJ_INC_FOOTER; ?>
     <!-- Required scripts -->
     <script src="/app/soswapp/jquery.soswapp/js/jquery.min.js">  </script>
@@ -153,14 +153,14 @@ require_once APP_ROOT . "/src/Helper.php";
             // html += ( "<td>" + el.id + "("+(el.active ? 'ACTIVE' : 'INACTIVE')+")</td>" );
             html += "<td>";
             html += (
-              "<a class=\"inherit\" href=\"javascript:void(0)\" onclick=\"faderBox.url(location.origin + '/admin/work-domain-make',{name:'"+el.name+"',callback:'refreshList'},{exitBtn:true});\"> <i class=\"fas fa-edit\"></i> "+el.name + " ("+el.acronym+") </a>"
+              "<a class=\"inherit\" href=\"javascript:void(0)\" onclick=\"faderBox.url('/app/tymfrontiers-cdn/admin.soswapp/service/work-domain-make.php',{name:'"+el.name+"',callback:'refreshList'},{exitBtn:true});\"> <i class=\"fas fa-edit\"></i> "+el.name + " ("+el.acronym+") </a>"
             );
             html+= "</td>";
             html += ( "<td>" +el.description+ "</td>" );
             html += ( "<td>" +el.work_paths+ "</td>" );
 
             html += "<td>";
-              html += ("<a class=\"blue\" href=\"javascript:void(0)\" onclick=\"faderBox.url(location.origin + '/admin/work-path-make',{domain:'"+el.name+"'},{exitBtn:true});\"> <i class=\"fas fa-plus\"></i> Add work path </a>");
+              html += ("<a class=\"blue\" href=\"javascript:void(0)\" onclick=\"faderBox.url('/app/tymfrontiers-cdn/admin.soswapp/service/work-path-make.php',{domain:'"+el.name+"'},{exitBtn:true});\"> <i class=\"fas fa-plus\"></i> Add work path </a>");
 
               html += (" | <a class=\"red\" href=\"javascript:void(0)\" onclick=\"doDelete('"+el.name+"')\"> <i class=\"fas fa-trash\"></i> Delete </a>");
 

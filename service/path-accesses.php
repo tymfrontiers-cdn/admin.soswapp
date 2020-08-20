@@ -38,7 +38,7 @@ $params = $gen->requestParam([
     <link rel="stylesheet" href="<?php echo \html_style("base.min.css"); ?>">
   </head>
   <body>
-    <?php \setup_page("/admin/path-accesses", "project-admin", true, PRJ_HEADER_HEIGHT); ?>
+    <?php \setup_page("/app/admin/path-accesses", "project-admin", true, PRJ_HEADER_HEIGHT); ?>
     <?php include PRJ_INC_HEADER; ?>
 
     <section id="main-content">
@@ -130,7 +130,7 @@ $params = $gen->requestParam([
       data-callback="refreshList"
       data-domain="<?php echo !empty($params['domain']) ? $params['domain'] : (@ $domains[0]->name); ?>"
       data-user="<?php echo !empty($params['user']) ? $params['user'] : $session->name; ?>"
-      onclick="sos.faderBox.url(location.origin + '/admin/path-access-make', $(this).data(), {exitBtn: true});"
+      onclick="sos.faderBox.url('/app/tymfrontiers-cdn/admin.soswapp/service/path-access-make.php', $(this).data(), {exitBtn: true});"
       class="sos-btn blue"
       id="floatn-plus"> <i class="fas fa-edit"></i></button>
     <?php include PRJ_INC_FOOTER; ?>

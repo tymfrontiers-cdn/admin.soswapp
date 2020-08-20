@@ -33,7 +33,7 @@ require_once APP_ROOT . "/src/Helper.php";
     <link rel="stylesheet" href="<?php echo \html_style("base.min.css"); ?>">
   </head>
   <body>
-    <?php \setup_page("/admin/work-paths", "project-admin", true, PRJ_HEADER_HEIGHT); ?>
+    <?php \setup_page("/app/admin/work-paths", "project-admin", true, PRJ_HEADER_HEIGHT); ?>
     <?php include PRJ_INC_HEADER; ?>
 
     <section id="main-content">
@@ -72,7 +72,7 @@ require_once APP_ROOT . "/src/Helper.php";
                   <option value=""> All</option>
                 <?php if ($domains = (new MultiForm(MYSQL_ADMIN_DB,'work_domain','name'))->findAll()) {
                   foreach ($domains as $domain) {
-                    echo " <option value=\"{$domain->name}\" title=\"{$domain->info}\" ";
+                    echo " <option value=\"{$domain->name}\" title=\"{$domain->description}\" ";
                     echo ">{$domain->name}</option>";
                   }
                 } ?>
@@ -84,7 +84,7 @@ require_once APP_ROOT . "/src/Helper.php";
                   <option value="">All</option>
                 <?php if ($access = (new MultiForm(MYSQL_ADMIN_DB,'work_group','name'))->findBySql("SELECT * FROM :db:.:tbl: WHERE `rank` <= {$db->escapeValue($session->access_rank)} ORDER BY `rank` ASC")) {
                   foreach ($access as $acs) {
-                    echo " <option value=\"{$acs->rank}\" title=\"{$acs->info}\" ";
+                    echo " <option value=\"{$acs->rank}\" ";
                     echo ">{$acs->name}</option>";
                   }
                 } ?>
@@ -139,7 +139,7 @@ require_once APP_ROOT . "/src/Helper.php";
         <br class="c-f">
       </div>
     </section>
-    <button type="button" onclick="sos.faderBox.url(location.origin + '/admin/work-path-make', {callback : 'refreshList'}, {exitBtn: true});" class="sos-btn blue" id="floatn-plus"> <i class="fas fa-plus"></i></button>
+    <button type="button" onclick="sos.faderBox.url('/app/tymfrontiers-cdn/admin.soswapp/service/work-path-make.php', {callback : 'refreshList'}, {exitBtn: true});" class="sos-btn blue" id="floatn-plus"> <i class="fas fa-plus"></i></button>
     <?php include PRJ_INC_FOOTER; ?>
     <!-- Required scripts -->
     <script src="/app/soswapp/jquery.soswapp/js/jquery.min.js">  </script>
@@ -177,7 +177,7 @@ require_once APP_ROOT . "/src/Helper.php";
           html += "<tr>";
             html += `<td>[${el.type}] `;
             html += (
-              "<a title='"+el.description+"' href=\"javascript:void(0)\" class='blue' onclick=\"faderBox.url('"+ location.origin +"/admin/work-path-make',{name:'"+el.name+"',callback:'refreshList'},{exitBtn:true});\"> <i class=\"far fa-edit\"></i> "+el.domain+ " " +el.path + "</a>"
+              "<a title='"+el.description+"' href=\"javascript:void(0)\" class='blue' onclick=\"faderBox.url('/app/tymfrontiers-cdn/admin.soswapp/service/work-path-make.php',{name:'"+el.name+"',callback:'refreshList'},{exitBtn:true});\"> <i class=\"far fa-edit\"></i> "+el.domain+ " " +el.path + "</a>"
             );
             html+= "</td>";
             html += ( "<td>" +el.min_access+ "</td>" );

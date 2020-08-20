@@ -41,7 +41,7 @@ if (!empty($params['id'])) {
     <div class="grid-10-tablet grid-8-laptop center-tablet">
       <div class="sec-div color blue bg-white drop-shadow">
         <header class="padding -p20 color-bg">
-          <h1> <i class="fas fa-info-circle"></i> User info</h1>
+          <h1 class="fw-lighter"> <i class="fas fa-info-circle"></i> User info</h1>
         </header>
 
         <div class="padding -p20">
@@ -88,7 +88,7 @@ if (!empty($params['id'])) {
             </table> <br>
             <hr>
             <p>
-              <b>Added by:</b> <a href="<?php echo WHOST . "/admin/users?search={$user->author()}"; ?>"><?php echo "{$user->author_name} - {$user->author()}"; ?></a> <br>
+              <b>Added by:</b> <a href="#" onclick="sos.faderBox.url('/app/tymfrontiers-cdn/admin.soswapp/service/user-view.php',{id:'<?php echo $user->id(); ?>'},{exitBtn:true});"><?php echo "{$user->author_name} - {$user->author()}"; ?></a> <br>
               <b>On</b> <?php echo $tym->dateTym($user->created()); ?>
             </p>
         <?php } ?>

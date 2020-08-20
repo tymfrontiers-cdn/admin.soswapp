@@ -34,7 +34,7 @@ $base_db = MYSQL_BASE_DB;
 $rdt = !empty($params['rdt']) ? $params['rdt'] : WHOST . "/dashboard";
 ?>
 <!DOCTYPE html>
-<html lang="en" dir="ltr" manifest="<?php echo WHOST; ?>/site.webmanifest">
+<html lang="en" dir="ltr" manifest="/site.webmanifest">
   <head>
     <meta charset="utf-8">
     <title>Create login password | <?php echo PRJ_TITLE; ?></title>

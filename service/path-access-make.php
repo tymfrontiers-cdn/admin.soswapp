@@ -60,7 +60,7 @@ endif;
     <div class="grid-10-tablet grid-8-laptop center-tablet">
       <div class="sec-div color blue bg-white drop-shadow">
         <header class="padding -p20 color-bg">
-          <h1> <i class="fas fa-slash fa-universal-access"></i> Path access</h1>
+          <h1 class="fw-lighter"> <i class="fas fa-slash fa-universal-access"></i> Path access</h1>
         </header>
 
         <div class="padding -p20">

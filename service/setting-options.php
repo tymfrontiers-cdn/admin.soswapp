@@ -33,7 +33,7 @@ require_once APP_ROOT . "/src/Helper.php";
     <link rel="stylesheet" href="<?php echo \html_style("base.min.css"); ?>">
   </head>
   <body>
-    <?php \setup_page("/admin/setting-options", "project-admin", true, PRJ_HEADER_HEIGHT); ?>
+    <?php \setup_page("/app/admin/setting-options", "project-admin", true, PRJ_HEADER_HEIGHT); ?>
     <?php include PRJ_INC_HEADER; ?>
 
     <section id="main-content">
@@ -113,7 +113,7 @@ require_once APP_ROOT . "/src/Helper.php";
         <br class="c-f">
       </div>
     </section>
-    <button type="button" onclick="sos.faderBox.url(location.origin + '/admin/setting/make-option', {callback : 'refreshList'}, {exitBtn: true});" class="sos-btn blue" id="floatn-plus"> <i class="fas fa-plus"></i></button>
+    <button type="button" onclick="sos.faderBox.url('/app/tymfrontiers-cdn/admin.soswapp/service/setting-make-option.php', {callback : 'refreshList'}, {exitBtn: true});" class="sos-btn blue" id="floatn-plus"> <i class="fas fa-plus"></i></button>
     <?php include PRJ_INC_FOOTER; ?>
     <!-- Required scripts -->
     <script src="/app/soswapp/jquery.soswapp/js/jquery.min.js">  </script>
@@ -152,7 +152,7 @@ require_once APP_ROOT . "/src/Helper.php";
             // html += ( "<td>" + el.id + "("+(el.active ? 'ACTIVE' : 'INACTIVE')+")</td>" );
             html += "<td>";
             html += (
-              "<a class=\"inherit\" href=\"javascript:void(0)\" onclick=\"faderBox.url(location.origin + '/admin/setting/make-option',{id:"+el.id+",callback:'refreshList'},{exitBtn:true});\"> <i class=\"fas fa-edit\"></i> ("+el.name + ") "+el.title+") </a>"
+              "<a class=\"inherit\" href=\"javascript:void(0)\" onclick=\"faderBox.url('/app/tymfrontiers-cdn/admin.soswapp/service/setting-make-option.php',{id:"+el.id+",callback:'refreshList'},{exitBtn:true});\"> <i class=\"fas fa-edit\"></i> ("+el.name + ") "+el.title+") </a>"
             );
             html+= "</td>";
             html += ( "<td>" +el.domain+ "</td>" );

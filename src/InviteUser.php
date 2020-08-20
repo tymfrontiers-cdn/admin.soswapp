@@ -129,20 +129,22 @@ $whost = WHOST;
 $prj_title = PRJ_TITLE;
 $auth_link = Generic::setGet(WHOST . "/app/tymfrontiers-cdn/admin.soswapp/service/accept-invite.php", $auth_param);
 $subject = "Invitation to join [{$prj_title}]";
-$prj_icon = WHOST . "/assets/img/icon-32x32.png";
+$prj_icon = PRJ_EMAIL_ICON;
 $prj_color_primary = PRJ_PRIMARY_COLOUR;
+$prj_desc = PRJ_DESCRIPTION;
 
 $params['note'] = !empty($params['note']) ? "<h3>Note</h3>" . Markdown::defaultTransform(\html_entity_decode($params['note'])) : "";
 $invite_msg = <<<IVMSG
 <header style="border-bottom: solid 5px {$prj_color_primary}; padding: 12px; margin-bottom: 8px; position:relative; height:auto">
   <a href="{$whost}"><img style="max-width:40%; max-height:72px; margin:0 0 3px 3px; float:right" src="{$prj_icon}" alt="Logo"></a>
-  <h1 style="margin: 1.5px; float:left; max-width:58%">{$subject}</h1>
   <br style="float:none; clear:both; padding:0; margin:0; height:0px;">
+  <h2>{$subject}</h2>
+  <p>$prj_desc</p>
 </header>
 <br style="float:none; clear:both; padding:0; margin:0; height:0px;">
 
 <section>
-  <p>Hi {$params['name']}, <br> <br> You have been invited to join {$prj_title} by {$admin->name} {$admin->surname}.</p>
+  <p>Hi {$params['name']}, <br> <br> You were invited to join <b>{$prj_title}</b> by {$admin->name} {$admin->surname}.</p>
   {$params['note']}
   <p>Please follow the link below to accept this invitation.</p>
   <p><a href="{$auth_link}"
@@ -220,7 +222,7 @@ if (!$otp->create()) {
   }
 }
 // register admin
-$user->_id = $data->uniqueRand("", 12, $data::RAND_MIXED_LOWER, false, MYSQL_ADMIN_DB, "user", "_id");
+$user->_id = $data->uniqueRand("", 12, $data::RAND_MIXED_UPPER, false, MYSQL_ADMIN_DB, "user", "_id");
 $user->email = $params["email"];
 $user->phone = $params["phone"];
 $user->name = $params["name"];

@@ -33,7 +33,7 @@ require_once APP_ROOT . "/src/Helper.php";
     <link rel="stylesheet" href="<?php echo \html_style("base.min.css"); ?>">
   </head>
   <body>
-    <?php \setup_page("/admin/settings", "project-admin", true, PRJ_HEADER_HEIGHT); ?>
+    <?php \setup_page("/app/admin/settings", "project-admin", true, PRJ_HEADER_HEIGHT); ?>
     <?php include PRJ_INC_HEADER; ?>
 
     <section id="main-content">
@@ -153,7 +153,7 @@ require_once APP_ROOT . "/src/Helper.php";
             // html += ( "<td>" + el.id + "("+(el.active ? 'ACTIVE' : 'INACTIVE')+")</td>" );
             html += ("<td title='"+el.min_desc+"'>");
             html += (
-              "<a class=\"inherit\" href=\"javascript:void(0)\" onclick=\"faderBox.url(location.origin + '/admin/setting/make',{id:"+el.id+",key:'"+el.name+"',domain:'"+el.domain+"',callback:'refreshList'},{exitBtn:true});\"> <i class=\"fas fa-edit\"></i> ("+el.name + ") "+el.title+") </a>"
+              "<a class=\"inherit\" href=\"javascript:void(0)\" onclick=\"faderBox.url('/app/tymfrontiers-cdn/admin.soswapp/service/setting-make.php',{id:"+el.id+",key:'"+el.name+"',domain:'"+el.domain+"',callback:'refreshList'},{exitBtn:true});\"> <i class=\"fas fa-edit\"></i> ("+el.name + ") "+el.title+") </a>"
             );
             html+= "</td>";
             html += ( "<td>" +el.value+ "</td>" );

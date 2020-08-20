@@ -61,7 +61,7 @@ $remember = !(bool)$params['remember'] ? \strtotime("+ 1 Hour") : \strtotime("+ 
 $session->login($user,$remember);
 $database = new MySQLDatabase(MYSQL_SERVER, MYSQL_USER_USERNAME, MYSQL_USER_PASS);
 $rdt = empty($params['rdt'])
-  ? WHOST . "/dashboard"
+  ? WHOST . "/work-domain"
   : $params['rdt'];
 
 echo \json_encode([

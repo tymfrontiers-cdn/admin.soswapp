@@ -90,7 +90,7 @@ if ($found_nav) {
     <link rel="stylesheet" href="/app/tymfrontiers-cdn/admin.soswapp/css/admin.min.css">
   </head>
   <body>
-    <?php \setup_page("/admin/dashboard", "project-admin", true, PRJ_HEADER_HEIGHT); ?>
+    <?php \setup_page("/app/admin/dashboard", "project-admin", true, PRJ_HEADER_HEIGHT); ?>
     <?php include PRJ_INC_HEADER; ?>
 
     <section id="main-content">
@@ -128,6 +128,6 @@ if ($found_nav) {
     <script src="/app/soswapp/faderbox.soswapp/js/faderbox.min.js"></script>
     <!-- project scripts -->
     <script src="<?php echo \html_script ("base.min.js"); ?>"></script>
-    <script src="/app/tymfrontiers-cdn/admin.soswapp/css/admin.min.css"></script>
+    <script src="/app/tymfrontiers-cdn/admin.soswapp/js/admin.min.js"></script>
   </body>
 </html>

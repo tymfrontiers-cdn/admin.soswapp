@@ -33,7 +33,7 @@ require_once APP_ROOT . "/src/Helper.php";
     <link rel="stylesheet" href="<?php echo \html_style("base.min.css"); ?>">
   </head>
   <body>
-    <?php \TymFrontiers\Helper\setup_page("/admin/user-dashlists", "project-admin", true, PRJ_HEADER_HEIGHT); ?>
+    <?php \TymFrontiers\Helper\setup_page("/app/admin/user-dashlists", "project-admin", true, PRJ_HEADER_HEIGHT); ?>
     <?php include PRJ_INC_HEADER; ?>
 
     <section id="main-content">
@@ -113,7 +113,7 @@ require_once APP_ROOT . "/src/Helper.php";
         <br class="c-f">
       </div>
     </section>
-    <button type="button" onclick="sos.faderBox.url(location.origin + '/admin/make/dashlist', {callback : 'refreshList'}, {exitBtn: true});" class="sos-btn blue" id="floatn-plus"> <i class="fas fa-plus"></i></button>
+    <button type="button" onclick="sos.faderBox.url('/app/tymfrontiers-cdn/admin.soswapp/service/make-dashlist.php', {callback : 'refreshList'}, {exitBtn: true});" class="sos-btn blue" id="floatn-plus"> <i class="fas fa-plus"></i></button>
     <?php include PRJ_INC_FOOTER; ?>
     <!-- Required scripts -->
     <script src="/app/soswapp/jquery.soswapp/js/jquery.min.js">  </script>
@@ -151,7 +151,7 @@ require_once APP_ROOT . "/src/Helper.php";
           html += "<tr>";
             html += "<td>";
             html += (
-              "<a title='"+el.description+"' href=\"javascript:void(0)\" class='blue' onclick=\"faderBox.url('"+ location.origin +"/admin/make/dashlist',{id:"+el.id+",callback:'refreshList'},{exitBtn:true});\"> <i class=\"fas fa-edit\"></i> "+el.path + "</a>"
+              "<a title='"+el.description+"' href=\"javascript:void(0)\" class='blue' onclick=\"faderBox.url('"+ "/app/tymfrontiers-cdn/admin.soswapp/service/make-dashlist.php',{id:"+el.id+",callback:'refreshList'},{exitBtn:true});\"> <i class=\"fas fa-edit\"></i> "+el.path + "</a>"
             );
             html+= "</td>";
             html += ( "<td> <b>" +el.title+ "</b> - "+el.subtitle+"</td>" );
