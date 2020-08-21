@@ -26,6 +26,7 @@ if (!empty($params['id'])) {
   $user = new \SOS\Admin($params['id']);
   if (empty($user->id())) $errors[] = "No user account found!";
 }
+$data =  new Data;
 ?>
 <input
   type="hidden"
@@ -63,7 +64,7 @@ if (!empty($params['id'])) {
               </tr>
               <tr>
                 <th>Account ID/Status</th>
-                <td><?php echo "<b>{$user->id()}</b> /{$user->status}"; ?></td>
+                <td><?php echo "<b>{$data->charSplit($user->id(),4,'-')}</b> /{$user->status}"; ?></td>
               </tr>
               <tr>
                 <th>Name</th>
