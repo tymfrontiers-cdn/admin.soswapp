@@ -9,7 +9,7 @@ require_once APP_ROOT . "/src/Helper.php";
 \check_access("/work-paths", true, "project-admin");
 ?>
 <!DOCTYPE html>
-<html lang="en" dir="ltr" manifest="<?php echo WHOST; ?>/site.webmanifest">
+<html lang="en" dir="ltr" manifest="/site.webmanifest">
   <head>
     <meta charset="utf-8">
     <title>Work paths | <?php echo PRJ_TITLE; ?></title>

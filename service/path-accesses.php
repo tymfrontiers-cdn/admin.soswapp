@@ -14,7 +14,7 @@ $params = $gen->requestParam([
 ],$_GET,[]);
 ?>
 <!DOCTYPE html>
-<html lang="en" dir="ltr" manifest="<?php echo WHOST; ?>/site.webmanifest">
+<html lang="en" dir="ltr" manifest="/site.webmanifest">
   <head>
     <meta charset="utf-8">
     <title>Path Access | <?php echo PRJ_TITLE; ?></title>

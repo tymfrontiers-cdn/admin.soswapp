@@ -9,7 +9,7 @@ require_once APP_ROOT . "/src/Helper.php";
 \check_access("/setting-options", true, "project-admin");
 ?>
 <!DOCTYPE html>
-<html lang="en" dir="ltr" manifest="<?php echo WHOST; ?>/site.webmanifest">
+<html lang="en" dir="ltr" manifest="/site.webmanifest">
   <head>
     <meta charset="utf-8">
     <title>Setting options | <?php echo PRJ_TITLE; ?></title>

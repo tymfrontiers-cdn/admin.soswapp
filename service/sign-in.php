@@ -16,7 +16,7 @@ if ($session->isLoggedIn()) {
 }
 ?>
 <!DOCTYPE html>
-<html lang="en" dir="ltr" manifest="<?php echo WHOST; ?>/site.webmanifest">
+<html lang="en" dir="ltr" manifest="/site.webmanifest">
   <head>
     <meta charset="utf-8">
     <title>Admin Login | <?php echo PRJ_TITLE; ?></title>
