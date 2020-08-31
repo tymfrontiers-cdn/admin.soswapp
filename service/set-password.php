@@ -49,7 +49,7 @@ if (!$params || !empty($gen->errors)) {
             id="set-password-form"
             class="block-ui"
             method="post"
-            action="/src/SetPassword.php"
+            action="/app/tymfrontiers-cdn/admin.soswapp/src/SetPassword.php"
             data-validate="false"
             onsubmit="sos.form.submit(this,pwdSaved);return false;"
             >

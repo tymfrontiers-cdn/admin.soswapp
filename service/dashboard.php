@@ -35,6 +35,7 @@ $query = "SELECT wp.name, wp.path, wp.access_rank, wp.access_rank_strict, wp.tit
                     FROM :db:.work_path
                     WHERE `domain` = 'project-admin'
                     AND `path` = '/'
+                    AND type = 'ALTER'
                     LIMIT 1
                  )
                  AND user = '{$db->escapeValue($session->name)}'

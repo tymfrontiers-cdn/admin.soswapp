@@ -44,7 +44,7 @@ if ($session->isLoggedIn()) {
     <section id="main-content">
       <div class="view-space">
         <div class="grid-7-tablet grid-5-laptop center-tablet">
-          <div class="sec-div color blue bg-white drop-shadow">
+          <div class="sec-div color face-primary bg-white drop-shadow">
             <header class="padding -p20 border -bmedium -bbottom">
               <span class="fa-stack fa-2x push-right color-text">
                 <i class="far fa-stack-2x fa-circle"></i>
@@ -79,7 +79,7 @@ if ($session->isLoggedIn()) {
                   <label for="remember" class="bold color-text">Remember me</label>
                 </div>
                 <div class="grid-5-tablet">
-                  <button type="submit" id="rsd-click" class="sos-btn blue"><i class="fas fa-sign-in-alt"></i> Sign in </button>
+                  <button type="submit" id="rsd-click" class="sos-btn face-primary"><i class="fas fa-sign-in-alt"></i> Sign in </button>
                 </div>
 
                 <br class="c-f">

@@ -171,6 +171,7 @@ require_once APP_ROOT . "/src/Helper.php";
               } if (in_array(el.status,['ACTIVE','PENDING'])) {
                 html += ("<option value='give-access' data-id='"+el.id+"'> Give access</option>");
               }
+            html += "</td>";
           html += "</tr>";
         });
         $(this).html(html);
