@@ -57,7 +57,7 @@ if( !$http_auth ){
 }
 include PRJ_ROOT . "/src/Pre-Process.php";
 // run process
-$setting = (new MultiForm(MYSQL_BASE_DB, "setting",'id'))->findById($params['id']);
+$setting = (new MultiForm(MYSQL_BASE_DB, "setting_option",'id'))->findById($params['id']);
 if( !$setting ){
   echo \json_encode([
     "status" => "3.1",
