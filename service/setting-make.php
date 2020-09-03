@@ -22,6 +22,10 @@ if (!$params || !empty($gen->errors)) {
     $errors[] = $er;
   }
 }
+// echo "<tt> <pre>";
+// \print_r($params);
+// echo "</pre></tt>";
+// exit;
 $set = false;
 $key_prop = false;
 if( $params ):
@@ -38,7 +42,7 @@ if( $params ):
     ->findBySql("SELECT name, type, type_variant, title, description
                  FROM :db:.:tbl:
                  WHERE name='{$database->escapeValue($params['key'])}'
-                 AND DOMAIN='{$database->escapeValue($params['domain'])}'
+                 AND domain='{$database->escapeValue($params['domain'])}'
                  LIMIT 1");
    if ($key_prop) {
      $key_prop = $key_prop[0];

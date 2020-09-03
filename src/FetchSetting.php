@@ -99,10 +99,11 @@ $query .= $sort;
 $query .= " LIMIT {$data->per_page} ";
 $query .= " OFFSET {$data->offset()}";
 
+// echo "<tt> <pre>";
 // echo \str_replace(':tbl:','setting_option',\str_replace(':db:',MYSQL_BASE_DB,$query));
+// echo "</pre></tt>";
 // exit;
 $found = $data->findBySql($query);
-// $tym = new \TymFrontiers\BetaTym;
 
 if( !$found ){
   die( \json_encode([

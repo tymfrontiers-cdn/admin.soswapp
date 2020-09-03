@@ -150,7 +150,6 @@ require_once APP_ROOT . "/src/Helper.php";
         var html = "";
         $.each(obj, function(i, el) {
           html += "<tr>";
-            // html += ( "<td>" + el.id + "("+(el.active ? 'ACTIVE' : 'INACTIVE')+")</td>" );
             html += ("<td title='"+el.min_desc+"'>");
             html += (
               "<a class=\"inherit\" href=\"javascript:void(0)\" onclick=\"faderBox.url('/app/tymfrontiers-cdn/admin.soswapp/service/setting-make.php',{id:"+el.id+",key:'"+el.name+"',domain:'"+el.domain+"',callback:'refreshList'},{exitBtn:true});\"> <i class=\"fas fa-edit\"></i> ("+el.name + ") "+el.title+") </a>"
