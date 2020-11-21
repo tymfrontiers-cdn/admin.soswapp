@@ -11,7 +11,7 @@ $gen = new Generic();
 $params = $gen->requestParam(
   [
     "email" =>["email","email"],
-    "password" =>["password","text",6,16],
+    "password" =>["password","text",6,32],
     "remember" => ["remember","boolean"],
 
     "rdt" => ["rdt","url"],
