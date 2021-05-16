@@ -17,8 +17,8 @@ $query = "SELECT wp.name, wp.path, wp.access_rank, wp.access_rank_strict, wp.tit
            WHERE wp.nav_visible = TRUE
            AND wp.domain='project-admin'
            AND  (
-             (wp.access_rank_strict = TRUE AND wp.access_rank = {$session->access_rank}) OR (
-               wp.access_rank <= {$session->access_rank}
+             (wp.access_rank_strict = TRUE AND wp.access_rank = {$session->access_rank()}) OR (
+               wp.access_rank <= {$session->access_rank()}
              )
            )
            AND (

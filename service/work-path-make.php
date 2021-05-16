@@ -94,7 +94,7 @@ endif;
               <h4 class="margin -mnone">Min Access</h4>
               <select name="access_rank" required>
                 <option value="">* Access</option>
-              <?php if ($access = (new MultiForm(MYSQL_ADMIN_DB,'work_group','name'))->findBySql("SELECT * FROM :db:.:tbl: WHERE `rank` <={$db->escapeValue($session->access_rank)} ORDER BY `rank` ASC")) {
+              <?php if ($access = (new MultiForm(MYSQL_ADMIN_DB,'work_group','name'))->findBySql("SELECT * FROM :db:.:tbl: WHERE `rank` <={$db->escapeValue($session->access_rank())} ORDER BY `rank` ASC")) {
                 foreach ($access as $acs) {
                   echo " <option value=\"{$acs->rank}\" ";
                   echo !$path

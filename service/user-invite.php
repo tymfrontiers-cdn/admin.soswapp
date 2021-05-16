@@ -121,7 +121,7 @@ try {
             <div class="grid-5-tablet">
               <label><i class="fas fa-asterisk fa-border fa-sm"></i> Work group</label>
               <select name="work_group" required>
-              <?php if ($work_group = (new MultiForm(MYSQL_ADMIN_DB,'work_group','name'))->findBySql("SELECT * FROM :db:.:tbl: WHERE `rank` <= {$database->escapeValue($session->access_rank)} AND `rank` > 0 ORDER BY `rank` ASC")) {
+              <?php if ($work_group = (new MultiForm(MYSQL_ADMIN_DB,'work_group','name'))->findBySql("SELECT * FROM :db:.:tbl: WHERE `rank` <= {$database->escapeValue($session->access_rank())} AND `rank` > 0 ORDER BY `rank` ASC")) {
                 foreach ($work_group as $wg) {
                   echo " <option value=\"{$wg->name}\"";
                   echo ">{$wg->name}</option>";
